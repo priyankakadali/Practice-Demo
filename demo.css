@@ -1,8 +1,9 @@
 body{
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
 }
+
 
  
 nav{
@@ -32,20 +33,20 @@ li{
 
 
 img{
-    position: absolute;
+    position: relative;
     width: 542px;
     height: 375px;
     left: 449px;
     top: 92px;
-
-
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .logo{
 position: absolute;
 left: 101px;
 right: 1153px;
-top: 6px;
+top: 0px;
 bottom: 647px;
 
 font-family: 'Poppins';
@@ -103,6 +104,7 @@ button{
     height: 50px;
     left: 566px;
     top: 612px;
+    font-size: medium;
 
     background: #EB1561;
     border-radius: 5px;
@@ -121,11 +123,33 @@ button{
     }
 }
 @media screen and (min-width:700px){
-    h4{
-        text-align: center;
-        font-size: 50px;
+    h4 p{
+        
+        font-size: 70px;
         
         text-decoration: none;
     }
 
 }
+
+@media screen and (max-width: 300px) {
+    nav {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    nav.responsive {position: relative;}
+    nav.responsive .icon-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
